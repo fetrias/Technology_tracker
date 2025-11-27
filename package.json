@@ -1,6 +1,6 @@
 {
   "name": "technology-tracker",
-  "homepage": "https://твой-username.github.io/technology-tracker",
+  "homepage": "https://fetrias.github.io/Technology_tracker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,7 +19,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build -b gh-pages"
   },
   "eslintConfig": {
     "extends": [

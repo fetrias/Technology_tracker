@@ -1,9 +1,10 @@
 import './App.css';
 import TechnologyCard from './components/TechnologyCard';
 import ProgressHeader from './components/ProgressHeader';
+import { useState } from 'react';
 
 function App() {
-  const technologies = [
+  const [technologies, setTechnologies] = useState([
     {
       id: 1,
       title: 'Сочный корм',
@@ -34,7 +35,21 @@ function App() {
       description: 'Изучение искусства составления сбалансированного рациона для свинки',
       status: 'not-started'
     }
-  ];
+  ]);
+
+  const toggleTechnologyStatus = (id) => {
+    setTechnologies(prevTechnologies =>
+      prevTechnologies.map(tech => {
+        if (tech.id === id) {
+          const statusOrder = ['not-started', 'in-progress', 'completed'];
+          const currentIndex = statusOrder.indexOf(tech.status);
+          const nextIndex = (currentIndex + 1) % statusOrder.length;
+          return { ...tech, status: statusOrder[nextIndex] };
+        }
+        return tech;
+      })
+    );
+  };
 
   return (
     <div className="App">
@@ -46,9 +61,11 @@ function App() {
           {technologies.map(tech => (
             <TechnologyCard
               key={tech.id}
+              id={tech.id}
               title={tech.title}
               description={tech.description}
               status={tech.status}
+              onClick={() => toggleTechnologyStatus(tech.id)}
             />
           ))}
         </div>
