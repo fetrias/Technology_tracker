@@ -25,3 +25,68 @@
     gap: 15px;
   }
 }
+
+.App {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.technologies-list h2 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  padding: 8px 16px;
+  border: 2px solid #377e5f;
+  background: white;
+  color: #377e5f;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filters button:hover {
+  background: #377e5f;
+  color: white;
+}
+
+.filters button.active {
+  background: #377e5f;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .filters {
+    gap: 5px;
+  }
+
+  .filters button {
+    padding: 6px 12px;
+    font-size: 0.9em;
+  }
+}
