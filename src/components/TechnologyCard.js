@@ -1,6 +1,7 @@
 import './TechnologyCard.css';
+import TechnologyNotes from './TechnologyNotes';
 
-function TechnologyCard({ id, title, description, status, onClick }) {
+function TechnologyCard({ id, title, description, status, onClick, notes, onNotesChange }) {
     const getStatusColor = () => {
         switch (status) {
             case 'completed':
@@ -35,7 +36,7 @@ function TechnologyCard({ id, title, description, status, onClick }) {
         <div
             className="technology-card"
             style={{ borderLeft: `4px solid ${getStatusColor()}` }}
-            onClick={handleClick}
+            onClick={onClick}
         >
             <div className="card-header">
                 <h3 className="card-title">{title}</h3>
@@ -44,6 +45,11 @@ function TechnologyCard({ id, title, description, status, onClick }) {
                 </span>
             </div>
             <p className="card-description">{description}</p>
+            <TechnologyNotes
+                notes={notes}
+                onNotesChange={onNotesChange}
+                techId={id}
+            />
         </div>
     );
 }
