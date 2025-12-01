@@ -44,9 +44,79 @@
     color: white;
 }
 
+.action-btn.export-data {
+    background: #9C27B0;
+    color: white;
+}
+
 .action-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для модального окна экспорта */
+.export-modal-content {
+    text-align: left;
+}
+
+.export-modal-content p {
+    margin: 10px 0;
+    color: #333;
+}
+
+.export-stats {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.export-stats p {
+    margin: 8px 0;
+}
+
+.export-hint {
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
+}
+
+.export-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-download {
+    flex: 1;
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn-download:hover {
+    background: #45a049;
+}
+
+.btn-close {
+    flex: 1;
+    padding: 10px 20px;
+    background: #666;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn-close:hover {
+    background: #555;
 }
 
 @media (max-width: 768px) {

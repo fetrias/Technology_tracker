@@ -1,4 +1,5 @@
 import './ProgressHeader.css';
+import ProgressBar from './ProgressBar';
 
 function ProgressHeader({ technologies }) {
     const total = technologies.length;
@@ -23,14 +24,13 @@ function ProgressHeader({ technologies }) {
                 </div>
             </div>
 
-            <div className="progress-bar-container">
-                <div
-                    className="progress-bar"
-                    style={{ width: `${progressPercentage}%` }}
-                >
-                    <span className="progress-text">{progressPercentage}%</span>
-                </div>
-            </div>
+            <ProgressBar
+                progress={progressPercentage}
+                color="#ffffff"
+                height={30}
+                showPercentage={false}
+                animated={true}
+            />
         </div>
     );
 }

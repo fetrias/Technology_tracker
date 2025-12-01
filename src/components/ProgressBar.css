@@ -1,0 +1,70 @@
+.progress-bar-container {
+    margin-bottom: 20px;
+}
+
+.progress-bar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.progress-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.progress-percentage {
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+}
+
+.progress-bar-outer {
+    position: relative;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    overflow: visible;
+}
+
+.progress-bar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 20px;
+    transition: width 0.5s ease;
+    position: relative;
+}
+
+/* Для использования внутри зеленого блока ProgressHeader */
+.progress-header .progress-bar-outer {
+    background: rgba(255, 255, 255, 0.2);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.progress-header .progress-bar-inner {
+    background: #ffffff;
+    border-radius: 20px;
+}
+
+.progress-header .progress-bar-inner::after {
+    content: attr(data-progress);
+    color: rgb(33, 103, 50);
+    font-weight: bold;
+    font-size: 0.9em;
+    position: absolute;
+    white-space: nowrap;
+}
+
+.progress-bar-inner.animated {
+    animation: fillAnimation 0.5s ease-in-out;
+}
+
+@keyframes fillAnimation {
+    from {
+        width: 0;
+    }
+}
