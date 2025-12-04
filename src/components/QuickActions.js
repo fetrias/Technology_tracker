@@ -35,7 +35,7 @@ function QuickActions({ technologies, onUpdateAllStatuses, onRandomSelect }) {
 
     return (
         <div className="quick-actions">
-            <h3>Быстрые действия</h3>
+            <h2 className="quick-actions-title">Быстрые действия</h2>
             <div className="action-buttons">
                 <button
                     className="action-btn complete-all"

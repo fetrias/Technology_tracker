@@ -6,10 +6,13 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.quick-actions h3 {
+.quick-actions h2,
+.quick-actions .quick-actions-title {
     margin: 0 0 15px 0;
     color: #333;
     text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 
 .action-buttons {
